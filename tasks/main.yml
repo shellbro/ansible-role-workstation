@@ -1,2 +1,53 @@
 ---
-# tasks file for ansible-role-my-workstation
+- name: install required software
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - ansible
+    - autossh
+    - chromedriver
+    - dos2unix
+    - elinks
+    - exiv2
+    - git
+    - gimp
+    - hexchat
+    - ImageMagick
+    - imapsync
+    - inkscape
+    - ipmitool
+    - java-1.8.0-openjdk
+    - keepassx
+    - lm_sensors 
+    - NetworkManager-openvpn
+    - NetworkManager-openvpn-gnome
+    - nmap
+    - nmap-ncat
+    - ntfs-3g
+    - recordmydesktop
+    - smartmontools
+    - terminator
+    - transmission
+    - whois
+    - youtube-dl
+    # - burp @bin
+    # - calibre
+    # - dropbox (headless, cron @reboot) @bin
+    # - glibc-common (for iconv)
+    # - google-chrome-stable @google-chrome
+    # - knock @nux-dextop
+    # - leiningen @bin
+    # - packer @bin
+    # - rdesktop @nux-dextop
+    # - skype @nux-dextop
+    # - slack @slack
+    # - sp-sc-auth (SopCast client) @bin
+    # - tor-browser @bin
+    # - truecrypt @dropbox
+    # - unrar @nux-desktop
+    # - vagrant @rpm
+    # - VirtualBox-5.1 @virtualbox
+    # - vlc @nux-dextop
+    # - xchm @nux-dextop
+  become: yes
