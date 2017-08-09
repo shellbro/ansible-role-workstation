@@ -33,7 +33,7 @@
     - youtube-dl
     # - burp @bin
     # - calibre
-    # - dropbox (headless, cron @reboot) @bin
+    # - dropbox (headless and python script, cron @reboot) @bin
     # - glibc-common (for iconv)
     # - google-chrome-stable @google-chrome
     # - knock @nux-dextop
