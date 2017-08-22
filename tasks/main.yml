@@ -27,6 +27,7 @@
     - ntfs-3g
     - recordmydesktop
     - smartmontools
+    - tigervnc
     - terminator
     - transmission
     - whois
