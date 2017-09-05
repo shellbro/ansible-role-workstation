@@ -30,6 +30,7 @@
     - tigervnc
     - terminator
     - transmission
+    - upower
     - whois
     - youtube-dl
     # - burp @bin
