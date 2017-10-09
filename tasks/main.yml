@@ -34,24 +34,29 @@
     - upower
     - whois
     - youtube-dl
-    # - burp @bin
+    # @rpm
+    # - TeamViewer
+    # - vagrant
+    # @nux-desktop
+    # - knock
+    # - rdesktop
+    # - skype
+    # - unrar
+    # - vlc
+    # - xchm
+    # downloaded to @bin
+    # - burp
+    # - dropbox (headless - cron @reboot, python script)
+    # - leiningen
+    # - packer
+    # - sp-sc-auth (SopCast client)
+    # - tor-browser
+    # @dropbox
+    # - truecrypt    
+    # other
     # - calibre
-    # - dropbox (headless - cron @reboot, python script) - @bin
     # - glibc-common (for iconv)
     # - google-chrome-stable @google-chrome
-    # - knock @nux-dextop
-    # - leiningen @bin
-    # - packer @bin
-    # - rdesktop @nux-dextop
-    # - skype @nux-dextop
     # - slack @slack
-    # - sp-sc-auth (SopCast client) @bin
-    # - TeamViewer @rpm
-    # - tor-browser @bin
-    # - truecrypt @dropbox
-    # - unrar @nux-desktop
-    # - vagrant @rpm
     # - VirtualBox-5.1 @virtualbox
-    # - vlc @nux-dextop
-    # - xchm @nux-dextop
   become: yes
