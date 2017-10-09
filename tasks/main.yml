@@ -36,7 +36,7 @@
     - youtube-dl
     # - burp @bin
     # - calibre
-    # - dropbox (headless and python script, cron @reboot) @bin
+    # - dropbox (headless - cron @reboot, python script) - @bin
     # - glibc-common (for iconv)
     # - google-chrome-stable @google-chrome
     # - knock @nux-dextop
@@ -46,6 +46,7 @@
     # - skype @nux-dextop
     # - slack @slack
     # - sp-sc-auth (SopCast client) @bin
+    # - TeamViewer @rpm
     # - tor-browser @bin
     # - truecrypt @dropbox
     # - unrar @nux-desktop
