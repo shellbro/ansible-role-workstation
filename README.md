@@ -1,5 +1,5 @@
 workstation
-=========
+===========
 
 Ansible role for configuring workstation.
 
