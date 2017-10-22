@@ -34,29 +34,30 @@
     - upower
     - whois
     - youtube-dl
-    # @rpm
+    # downloaded RPMs (/opt)
     # - TeamViewer
     # - vagrant
-    # @nux-desktop
-    # - knock
-    # - rdesktop
-    # - skype
-    # - unrar
-    # - vlc
-    # - xchm
-    # downloaded to @bin
+    # downloaded standalones (~/bin)
     # - burp
     # - dropbox (headless - cron @reboot, python script)
     # - leiningen
     # - packer
     # - sp-sc-auth (SopCast client)
     # - tor-browser
-    # @dropbox
-    # - truecrypt    
-    # other
-    # - calibre
-    # - glibc-common (for iconv)
+    # downloaded from Dropbox
+    # - truecrypt
+    # @nux-desktop
+    # - knock
+    # - rdesktop
+    # - skype
+    # - unrar
+    # - vlc
+    # - xchm    
+    # own repositories
     # - google-chrome-stable @google-chrome
     # - slack @slack
-    # - VirtualBox-5.1 @virtualbox
+    # - VirtualBox-5.1 @virtualbox    
+    # other
+    # - calibre
+    # - glibc-common (provides iconv)
   become: yes
