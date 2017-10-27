@@ -1,7 +1,7 @@
 workstation
 ===========
 
-Ansible role for configuring workstation.
+Ansible role for configuring workstation (CentOS 7).
 
 Requirements
 ------------
