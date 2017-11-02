@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     end
     centos.vm.provision "ansible" do |a|
       a.limit = "all"
-      a.playbook = "tests/test-vagrant.yml"
+      a.playbook = "tests/test.yml"
       a.verbose = false
     end
     centos.vm.synced_folder ".", "/vagrant", disabled: true

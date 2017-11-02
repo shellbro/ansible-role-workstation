@@ -1,6 +1,8 @@
 workstation
 ===========
 
+[![Build Status](https://travis-ci.org/shellbro/ansible-role-workstation.svg?branch=master)](https://travis-ci.org/shellbro/ansible-role-workstation)
+
 Ansible role for configuring workstation (CentOS 7).
 
 Requirements
