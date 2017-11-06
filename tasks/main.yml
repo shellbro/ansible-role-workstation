@@ -53,11 +53,11 @@
     # - unrar
     # - vlc
     # - xchm    
-    # own repositories
+    # custom repositories
     # - google-chrome-stable @google-chrome
     # - slack @slack
     # - VirtualBox-5.1 @virtualbox    
     # other
     # - calibre
-    # - glibc-common (provides iconv)
+    # - glibc-common (this package provides iconv command)
   become: yes
