@@ -1,7 +1,7 @@
 ---
 - name: install required software
   yum:
-    name: "{{ item }}"
+    name: '{{ item }}'
     state: present
   with_items:
     - ansible
