@@ -20,7 +20,8 @@
     - ipmitool
     - java-1.8.0-openjdk
     - keepassx
-    - lm_sensors 
+    - lm_sensors
+    - mediainfo
     - NetworkManager-openvpn
     - NetworkManager-openvpn-gnome
     - nmap
