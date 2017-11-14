@@ -27,6 +27,7 @@
     - nmap
     - nmap-ncat
     - ntfs-3g
+    - poppler-utils # command line utilities for converting PDF files
     - recordmydesktop
     - smartmontools
     - tigervnc
