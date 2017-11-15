@@ -6,6 +6,7 @@
   with_items:
     - ansible
     - autossh
+    - chromium
     - chromedriver
     - dos2unix
     - elinks
