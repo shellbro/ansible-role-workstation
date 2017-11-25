@@ -27,7 +27,7 @@
     - NetworkManager-openvpn-gnome
     - nmap
     - nmap-ncat
-    - ntfs-3g
+    - ntfsprogs
     - poppler-utils # command line utilities for converting PDF files
     - recordmydesktop
     - smartmontools
