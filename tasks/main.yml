@@ -40,6 +40,7 @@
     # downloaded RPMs (/opt)
     # - TeamViewer
     # - vagrant
+    # - skype
     # downloaded standalones (~/bin)
     # - burp
     # - dropbox (headless - cron @reboot, python script)
@@ -52,7 +53,6 @@
     # @nux-desktop
     # - knock
     # - rdesktop
-    # - skype
     # - unrar
     # - vlc
     # - xchm    
