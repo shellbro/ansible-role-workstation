@@ -37,7 +37,7 @@
     - upower
     - whois
     - youtube-dl
-    # downloaded RPMs (/opt)
+    # downloaded RPMs (often /opt)
     # - TeamViewer
     # - vagrant
     # - skype
