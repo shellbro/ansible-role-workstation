@@ -6,6 +6,7 @@
   with_items:
     - ansible
     - autossh
+    - centos-release-scl-rh
     - chromium
     - chromedriver
     - dos2unix
@@ -40,7 +41,6 @@
     # downloaded RPMs (often /opt)
     # - TeamViewer
     # - vagrant
-    # - skype
     # downloaded standalones (~/bin)
     # - burp
     # - dropbox (headless - cron @reboot, python script)
@@ -58,6 +58,7 @@
     # - xchm    
     # custom repositories
     # - google-chrome-stable @google-chrome
+    # - skype    
     # - slack @slack
     # - VirtualBox-5.1 @virtualbox    
     # other
