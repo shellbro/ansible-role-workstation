@@ -5,6 +5,7 @@
     state: present
   with_items:
     - ansible
+    - argbash
     - autossh
     - centos-release-scl-rh
     - chromium
