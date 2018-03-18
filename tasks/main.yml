@@ -12,6 +12,7 @@
     - chromedriver
     - dos2unix
     - elinks
+    - emacs    
     - exiv2
     - git
     - gimp
