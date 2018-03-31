@@ -12,7 +12,7 @@
     - chromedriver
     - dos2unix
     - elinks
-    - emacs    
+    - emacs
     - exiv2
     - git
     - gimp
@@ -59,12 +59,12 @@
     # - shutter
     # - unrar
     # - vlc
-    # - xchm    
+    # - xchm
     # custom repositories
     # - google-chrome-stable @google-chrome
-    # - skype    
+    # - skype
     # - slack @slack
-    # - VirtualBox-5.1 @virtualbox    
+    # - VirtualBox-5.1 @virtualbox
     # other
     # - calibre
     # - glibc-common (this package provides iconv command)
