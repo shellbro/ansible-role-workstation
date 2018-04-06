@@ -11,6 +11,8 @@
     - centos-release-scl-rh
     - chromium
     - chromedriver
+    - csv
+    - csvcat
     - dos2unix
     - elinks
     - emacs
@@ -41,6 +43,7 @@
     - uget
     - upower
     - whois
+    - xls2csv
     - youtube-dl
     # downloaded RPMs (often /opt)
     # - TeamViewer
