@@ -13,7 +13,9 @@ None
 Role Variables
 --------------
 
-None
+* autostart_apps - configure autostart (by default no)
+* autostart_user - configure autostart for this user (required when
+autostart_apps is yes)
 
 Dependencies
 ------------
@@ -25,7 +27,9 @@ Example Playbook
 
     - hosts: servers
       roles:
-        - shellbro.workstation
+        - role: shellbro.workstation
+          autostart_apps: yes
+          autostart_user: shellbro
 
 License
 -------

@@ -51,7 +51,7 @@
     # - vagrant
     # downloaded standalones (~/bin)
     # - burp
-    # - dropbox (headless - cron @reboot, python script)
+    # - dropbox (headless daemon, python script for managing daemon)
     # - leiningen
     # - packer
     # - sp-sc-auth (SopCast client)
@@ -73,4 +73,23 @@
     # other
     # - calibre
     # - glibc-common (this package provides iconv command)
+  become: yes
+- name: autostart dropbox daemon on boot
+  cron:
+    name: start dropbox daemon
+    special_time: reboot
+    user: '{{ autostart_user }}'
+    job: /home/shellbro/.dropbox-dist/dropboxd
+  when: autostart_apps
+  become: yes
+- name: autostart GUI apps on login
+  copy:
+    src: '{{ item }}'
+    dest: /home/{{ autostart_user }}/.config/autostart
+    owner: '{{ autostart_user }}'
+    group: '{{ autostart_user }}'
+    mode: 0664
+  with_fileglob:
+    - autostart/*
+  when: autostart_apps
   become: yes
