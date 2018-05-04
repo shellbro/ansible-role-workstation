@@ -6,6 +6,7 @@
   with_items:
     - adobe-source-code-pro-fonts
     - ansible
+    - ansible-lint
     - argbash
     - autossh
     - centos-release-scl-rh
