@@ -31,7 +31,7 @@
     - keepassx
     - lm_sensors
     - mediainfo
-    - NetworkManager-openvpn
+    - NetworkManager-l2tp-gnome
     - NetworkManager-openvpn-gnome
     - nmap
     - nmap-ncat
