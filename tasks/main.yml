@@ -1,96 +1,131 @@
 ---
-- name: install required software
+
+- name: add Software Collection repository
   yum:
-    name: '{{ item }}'
-    state: present
-  with_items:
-    - adobe-source-code-pro-fonts
-    - ansible
-    - ansible-lint
-    - argbash
-    - autossh
-    - centos-release-scl-rh
-    - chromium
-    - chromedriver
-    - csv
-    - csvcat
-    - dos2unix
-    - elinks
-    - emacs
-    - exiv2
-    - git
-    - gimp
-    - gnome-tweak-tool
-    - hexchat
-    - ImageMagick
-    - imapsync
-    - inkscape
-    - ipmitool
-    - java-1.8.0-openjdk
-    - jq
-    - keepassx
-    - lm_sensors
-    - mediainfo
-    - NetworkManager-l2tp-gnome
-    - NetworkManager-openvpn-gnome
-    - nmap
-    - nmap-ncat
-    - ntfsprogs
-    - poppler-utils # command line utilities for converting PDF files
-    - recordmydesktop
-    - smartmontools
-    - tigervnc
-    - terminator
-    - transmission
-    - uget
-    - upower
-    - whois
-    - xls2csv
-    - youtube-dl
-    # downloaded RPMs (often /opt)
-    # - TeamViewer
-    # - vagrant
-    # downloaded standalones (~/bin)
-    # - burp
-    # - dropbox (headless daemon, python script for managing daemon)
-    # - leiningen
-    # - packer
-    # - sp-sc-auth (SopCast client)
-    # - tor-browser
-    # downloaded from Dropbox
-    # - truecrypt
-    # @nux-desktop
-    # - knock
-    # - rdesktop
-    # - shutter
-    # - unrar
-    # - vlc
-    # - xchm
-    # custom repositories
-    # - google-chrome-stable @google-chrome
-    # - skype
-    # - slack @slack
-    # - VirtualBox-5.1 @virtualbox
-    # other
-    # - calibre
-    # - glibc-common (this package provides iconv command)
+    name: centos-release-scl-rh
   become: yes
+
+- name: add pip
+  yum:
+    name:
+      - python-devel
+      - python-pip
+  become: yes
+
+- name: add npm
+  yum:
+    name: npm
+  become: yes
+
+- name: install software from CentOS repositories
+  yum:
+    name:
+      - dos2unix
+      - elinks
+      - emacs
+      - exiv2
+      - git
+      - gimp
+      - gnome-tweak-tool
+      - ImageMagick
+      - inkscape
+      - ipmitool
+      - java-1.8.0-openjdk
+      - lm_sensors
+      - nmap
+      - nmap-ncat
+      - poppler-utils
+      - smartmontools
+      - tigervnc
+      - upower
+      - whois
+  become: yes
+
+- name: install software from EPEL repository
+  yum:
+    name:
+      - adobe-source-code-pro-fonts
+      - ansible
+      - ansible-lint
+      - argbash
+      - autossh
+      - chromium
+      - chromedriver
+      - csv
+      - csvcat
+      - hexchat
+      - imapsync
+      - jq
+      - keepassx
+      - mediainfo
+      - NetworkManager-l2tp-gnome
+      - NetworkManager-openvpn-gnome
+      - ntfsprogs
+      - recordmydesktop
+      - terminator
+      - transmission
+      - uget
+      - xls2csv
+      - youtube-dl
+  become: yes
+
+- name: install software from pip
+  pip:
+    name: molecule
+  become: yes
+
+- name: install software from npm
+  npm:
+    name: castnow
+    global: yes
+  become: yes
+
 - name: autostart dropbox daemon on boot
   cron:
+    job: /home/shellbro/.dropbox-dist/dropboxd
     name: start dropbox daemon
     special_time: reboot
     user: '{{ autostart_user }}'
-    job: /home/shellbro/.dropbox-dist/dropboxd
-  when: autostart_apps
   become: yes
+  when: autostart_apps
+
 - name: autostart GUI apps on login
   copy:
-    src: '{{ item }}'
     dest: /home/{{ autostart_user }}/.config/autostart
-    owner: '{{ autostart_user }}'
     group: '{{ autostart_user }}'
     mode: 0664
+    owner: '{{ autostart_user }}'
+    src: '{{ item }}'
   with_fileglob:
     - autostart/*
-  when: autostart_apps
   become: yes
+  when: autostart_apps
+
+# TODO:
+# downloaded RPMs (/opt)
+# - TeamViewer
+# - vagrant
+# downloaded standalones (~/bin)
+# - burp
+# - dropbox (headless daemon, python script for managing daemon)
+# - leiningen
+# - packer
+# - sp-sc-auth (SopCast client)
+# - tor-browser
+# downloaded from Dropbox
+# - truecrypt
+# @nux-desktop
+# - knock
+# - rdesktop
+# - shutter
+# - unrar
+# - vlc
+# - xchm
+# custom repositories
+# - google-chrome-stable @google-chrome
+# - skype
+# - slack @slack
+# - VirtualBox-5.1 @virtualbox
+# other
+# - calibre
+# - glibc-common (this package provides iconv command)
