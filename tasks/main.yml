@@ -1,10 +1,5 @@
 ---
 
-- name: add npm
-  yum:
-    name: npm
-  become: yes
-
 - name: install software from CentOS repositories
   yum:
     name:

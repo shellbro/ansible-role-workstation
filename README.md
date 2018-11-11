@@ -21,8 +21,9 @@ Dependencies
 ------------
 
 * shellbro.epel
-* shellbro.scl
+* shellbro.npm
 * shellbro.pip
+* shellbro.scl
 
 Example Playbook
 ----------------
