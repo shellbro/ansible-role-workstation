@@ -1,3 +1,4 @@
 ---
 # defaults file for ansible-role-my-workstation
+
 autostart_apps: no
