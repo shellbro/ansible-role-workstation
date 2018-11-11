@@ -22,6 +22,7 @@ Dependencies
 
 * shellbro.epel
 * shellbro.scl
+* shellbro.pip
 
 Example Playbook
 ----------------
