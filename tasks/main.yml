@@ -28,6 +28,7 @@
     - inkscape
     - ipmitool
     - java-1.8.0-openjdk
+    - jq
     - keepassx
     - lm_sensors
     - mediainfo
