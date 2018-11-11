@@ -54,4 +54,5 @@ galaxy_info:
 
 dependencies:
   - shellbro.epel
+  - shellbro.pip
   - shellbro.scl

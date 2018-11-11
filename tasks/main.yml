@@ -1,12 +1,5 @@
 ---
 
-- name: add pip
-  yum:
-    name:
-      - python-devel
-      - python-pip
-  become: yes
-
 - name: add npm
   yum:
     name: npm
