@@ -5,7 +5,6 @@
     name:
       - dos2unix
       - elinks
-      - emacs
       - exiv2
       - git
       - gimp
@@ -92,15 +91,12 @@
 # - burp
 # - dropbox (headless daemon, python script for managing daemon)
 # - leiningen
-# - packer
 # - sp-sc-auth (SopCast client)
 # - tor-browser
 # downloaded from Dropbox
 # - truecrypt
 # @nux-desktop
-# - knock
 # - rdesktop
-# - shutter
 # - unrar
 # - vlc
 # - xchm
