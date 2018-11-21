@@ -20,7 +20,9 @@ autostart_apps is yes)
 Dependencies
 ------------
 
+* shellbro.emacs
 * shellbro.epel
+* shellbro.hardware-tools
 * shellbro.npm
 * shellbro.pip
 * shellbro.scl

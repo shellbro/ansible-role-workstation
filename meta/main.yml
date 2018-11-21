@@ -53,7 +53,9 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
+  - shellbro.emacs
   - shellbro.epel
+  - shellbro.hardware-tools
   - shellbro.npm
   - shellbro.pip
   - shellbro.scl
