@@ -43,12 +43,18 @@
       - NetworkManager-l2tp-gnome
       - NetworkManager-openvpn-gnome
       - ntfsprogs
+      - python34
       - recordmydesktop
       - terminator
       - transmission
       - uget
       - xls2csv
       - youtube-dl
+  become: yes
+
+- name: install software from SCL
+  yum:
+    name: rh-git29
   become: yes
 
 - name: install software from pip
