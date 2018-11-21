@@ -6,7 +6,6 @@
       - dos2unix
       - elinks
       - exiv2
-      - git
       - gimp
       - gnome-tweak-tool
       - ImageMagick
