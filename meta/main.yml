@@ -53,6 +53,7 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies:
+  - shellbro.docker-engine-ce
   - shellbro.emacs
   - shellbro.epel
   - shellbro.hardware-tools

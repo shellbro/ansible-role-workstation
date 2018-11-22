@@ -20,6 +20,7 @@ autostart_apps is yes)
 Dependencies
 ------------
 
+* shellbro.docker-engine-ce
 * shellbro.emacs
 * shellbro.epel
 * shellbro.hardware-tools
