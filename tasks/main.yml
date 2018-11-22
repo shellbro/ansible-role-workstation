@@ -27,7 +27,6 @@
     name:
       - adobe-source-code-pro-fonts
       - ansible
-      - ansible-lint
       - argbash
       - autossh
       - chromium
