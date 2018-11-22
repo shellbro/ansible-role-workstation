@@ -25,6 +25,7 @@ Dependencies
 * shellbro.epel
 * shellbro.hardware-tools
 * shellbro.npm
+* shellbro.nux-dextop
 * shellbro.pip
 * shellbro.scl
 
