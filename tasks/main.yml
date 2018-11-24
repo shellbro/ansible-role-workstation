@@ -3,6 +3,7 @@
 - name: install software from CentOS repositories
   yum:
     name:
+      - gcc
       - dos2unix
       - elinks
       - exiv2
