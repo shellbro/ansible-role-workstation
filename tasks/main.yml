@@ -62,6 +62,7 @@
   pip:
     name:
       - molecule
+      - docker
   become: true
 
 - name: install software from npm
