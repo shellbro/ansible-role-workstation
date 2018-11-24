@@ -2,10 +2,10 @@
 
 sudo: required
 
+language: python
+
 services:
   - docker
-
-language: python
 
 before_install:
   - sudo apt-get -qq update
