@@ -20,13 +20,14 @@
       - tigervnc
       - upower
       - whois
-  become: yes
+  become: true
 
 - name: install software from EPEL repository
   yum:
     name:
       - adobe-source-code-pro-fonts
       - ansible
+      - ansible-lint
       - argbash
       - autossh
       - chromium
@@ -49,25 +50,24 @@
       - xls2csv
       - yamllint
       - youtube-dl
-  become: yes
+  become: true
 
 - name: install software from SCL
   yum:
     name: rh-git29
-  become: yes
+  become: true
 
 - name: install software from pip
   pip:
     name:
       - molecule
-      - python-vagrant
-  become: yes
+  become: true
 
 - name: install software from npm
   npm:
     name: castnow
-    global: yes
-  become: yes
+    global: true
+  become: true
 
 - name: autostart dropbox daemon on boot
   cron:
@@ -75,7 +75,7 @@
     name: start dropbox daemon
     special_time: reboot
     user: '{{ autostart_user }}'
-  become: yes
+  become: true
   when: autostart_apps
 
 - name: autostart GUI apps on login
@@ -87,7 +87,7 @@
     src: '{{ item }}'
   with_fileglob:
     - autostart/*
-  become: yes
+  become: true
   when: autostart_apps
 
 # TODO:

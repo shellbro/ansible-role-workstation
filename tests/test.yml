@@ -1,6 +1,0 @@
----
-- hosts: all
-  roles:
-    - role: shellbro.workstation
-      autostart_apps: yes
-      autostart_user: vagrant
