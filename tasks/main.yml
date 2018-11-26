@@ -63,6 +63,7 @@
     name:
       - docker
       - molecule
+      - python-vagrant
   become: true
 
 - name: install software from npm
