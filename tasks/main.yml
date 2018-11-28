@@ -8,6 +8,7 @@
       - elinks
       - exiv2
       - gimp
+      - git
       - gnome-tweak-tool
       - ImageMagick
       - inkscape
@@ -35,6 +36,7 @@
       - autossh
       - chromium
       - chromedriver
+      - cloc
       - csv
       - csvcat
       - hexchat
