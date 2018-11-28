@@ -3,5 +3,4 @@
   hosts: all
   roles:
     - role: ansible-role-workstation
-      autostart_apps: true
-      autostart_user: root
+      autostart_apps: false
