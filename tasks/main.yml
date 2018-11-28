@@ -9,6 +9,7 @@
       - exiv2
       - gimp
       - git
+      - glibc-common # iconv
       - gnome-tweak-tool
       - ImageMagick
       - inkscape
@@ -122,4 +123,3 @@
 # - VirtualBox-5.1 @virtualbox
 # other
 # - calibre
-# - glibc-common (this package provides iconv command)
