@@ -105,6 +105,7 @@
 # - vagrant
 # downloaded standalones (~/bin)
 # - burp
+# - calibre
 # - dropbox (headless daemon, python script for managing daemon)
 # - leiningen
 # - sp-sc-auth (SopCast client)
@@ -121,5 +122,3 @@
 # - skype
 # - slack @slack
 # - VirtualBox-5.1 @virtualbox
-# other
-# - calibre
