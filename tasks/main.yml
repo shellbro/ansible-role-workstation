@@ -17,6 +17,8 @@
       - nmap
       - nmap-ncat
       - poppler-utils
+      - python
+      - python-devel
       - smartmontools
       - tigervnc
       - upower
@@ -64,6 +66,7 @@
       - docker
       - molecule
       - python-vagrant
+      - s-tui
   become: true
 
 - name: install software from npm
