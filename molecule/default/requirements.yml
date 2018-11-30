@@ -1,7 +1,5 @@
 ---
 
-- src: https://github.com/shellbro/ansible-role-base.git
-  name: shellbro.base
 - src: https://github.com/shellbro/ansible-role-docker-engine-ce.git
   name: shellbro.docker-engine-ce
 - src: https://github.com/shellbro/ansible-role-emacs.git
