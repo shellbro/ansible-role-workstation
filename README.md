@@ -13,10 +13,14 @@ None
 Role Variables
 --------------
 
-* rpm_url_chrome - URL to Google Chrome RPM
+* rpm_url_chrome - URL to Google Chrome RPM (required)
 * autostart_apps - configure autostart (by default true)
 * autostart_user - configure autostart for this user (required when
 autostart_apps is true)
+
+Dependencies' vars:
+
+* nux_dextop_rpm_url - rpm_url var from nux-dextop role
 
 Dependencies
 ------------
@@ -44,6 +48,7 @@ Example Playbook
           rpm_url_chrome: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
           autostart_apps: true
           autostart_user: shellbro
+          nux_dextop_rpm_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
 License
 -------

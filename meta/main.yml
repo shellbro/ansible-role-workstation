@@ -23,6 +23,7 @@ dependencies:
   - shellbro.epel
   - shellbro.hardware-tools
   - shellbro.npm
-  - shellbro.nux-dextop
+  - role: shellbro.nux-dextop
+    rpm_url: '{{ nux_dextop_rpm_url }}'
   - shellbro.pip
   - shellbro.scl
