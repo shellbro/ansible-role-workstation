@@ -20,14 +20,19 @@ autostart_apps is true)
 Dependencies
 ------------
 
-* shellbro.docker-engine-ce
-* shellbro.emacs
+Dependencies that are required for this role to work:
+
 * shellbro.epel
-* shellbro.hardware-tools
 * shellbro.npm
 * shellbro.nux-dextop
 * shellbro.pip
 * shellbro.scl
+
+Roles that are pulled for user convenience:
+
+* shellbro.docker-engine-ce
+* shellbro.emacs
+* shellbro.hardware-tools
 
 Example Playbook
 ----------------
