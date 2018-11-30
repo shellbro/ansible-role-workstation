@@ -50,6 +50,7 @@ Example Playbook
           rpm_url_slack: https://downloads.slack-edge.com/linux_releases/slack-3.3.3-0.1.fc21.x86_64.rpm
           autostart_apps: true
           autostart_user: shellbro
+
           nux_dextop_rpm_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
 License
