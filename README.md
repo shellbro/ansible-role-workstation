@@ -30,6 +30,7 @@ Dependencies that are required for this role to work:
 
 Roles that are pulled for user convenience:
 
+* shellbro.base
 * shellbro.docker-engine-ce
 * shellbro.emacs
 * shellbro.hardware-tools

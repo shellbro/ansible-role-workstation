@@ -18,6 +18,7 @@ galaxy_info:
   galaxy_tags: []
 
 dependencies:
+  - shellbro.base
   - shellbro.docker-engine-ce
   - shellbro.emacs
   - shellbro.epel
