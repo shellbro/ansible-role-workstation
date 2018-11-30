@@ -4,7 +4,7 @@ galaxy_info:
   author: Jakub Gorczyca
   description: Ansible role for configuring workstation (CentOS 7).
 
-  issue_tracker_url: https://travis-ci.org/shellbro/ansible-role-workstation
+  issue_tracker_url: https://github.com/shellbro/ansible-role-workstation/issues
 
   license: BSD
 
