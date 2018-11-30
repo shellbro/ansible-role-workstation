@@ -55,6 +55,15 @@
     name: rh-git29
   become: true
 
+- name: install software from nux-dextop repository
+  yum:
+    name:
+      - rdesktop
+      - unrar
+      - vlc
+      - xchm
+  become: true
+
 - name: install software from pip
   pip:
     name:
@@ -94,11 +103,6 @@
 # - tor-browser
 # downloaded from Dropbox
 # - truecrypt
-# @nux-desktop
-# - rdesktop
-# - unrar
-# - vlc
-# - xchm
 # custom repositories
 # - google-chrome-stable @google-chrome
 # - skype
