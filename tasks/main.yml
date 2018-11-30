@@ -78,15 +78,6 @@
     global: true
   become: true
 
-- name: autostart dropbox daemon on boot
-  cron:
-    job: /home/shellbro/.dropbox-dist/dropboxd
-    name: start dropbox daemon
-    special_time: reboot
-    user: '{{ autostart_user }}'
-  become: true
-  when: autostart_apps
-
 - name: autostart GUI apps on login
   copy:
     dest: /home/{{ autostart_user }}/.config/autostart
@@ -106,7 +97,6 @@
 # downloaded standalones (~/bin)
 # - burp
 # - calibre
-# - dropbox (headless daemon, python script for managing daemon)
 # - leiningen
 # - sp-sc-auth (SopCast client)
 # - tor-browser
