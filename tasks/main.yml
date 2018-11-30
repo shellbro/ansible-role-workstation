@@ -84,6 +84,11 @@
     name: '{{ rpm_url_chrome }}'
   become: true
 
+- name: "install Slack and it's repository"
+  yum:
+    name: '{{ rpm_url_slack }}'
+  become: true
+
 - name: autostart GUI apps on login
   copy:
     dest: /home/{{ autostart_user }}/.config/autostart

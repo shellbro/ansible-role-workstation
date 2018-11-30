@@ -14,6 +14,7 @@ Role Variables
 --------------
 
 * rpm_url_chrome - URL to Google Chrome RPM (required)
+* rpm_url_slack - URL to Slack RPM (required)
 * autostart_apps - configure autostart (by default true)
 * autostart_user - configure autostart for this user (required when
 autostart_apps is true)
@@ -46,6 +47,7 @@ Example Playbook
       roles:
         - role: shellbro.workstation
           rpm_url_chrome: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+          rpm_url_slack: https://downloads.slack-edge.com/linux_releases/slack-3.3.3-0.1.fc21.x86_64.rpm
           autostart_apps: true
           autostart_user: shellbro
           nux_dextop_rpm_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
