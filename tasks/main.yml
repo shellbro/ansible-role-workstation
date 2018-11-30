@@ -3,7 +3,6 @@
 - name: install software from CentOS repositories
   yum:
     name:
-      - gcc
       - dos2unix
       - elinks
       - exiv2
@@ -16,7 +15,6 @@
       - java-1.8.0-openjdk
       - poppler-utils
       - python
-      - python-devel
       - tigervnc
       - whois
   become: true
