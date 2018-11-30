@@ -13,17 +13,11 @@
       - gnome-tweak-tool
       - ImageMagick
       - inkscape
-      - ipmitool
       - java-1.8.0-openjdk
-      - lm_sensors
-      - nmap
-      - nmap-ncat
       - poppler-utils
       - python
       - python-devel
-      - smartmontools
       - tigervnc
-      - upower
       - whois
   become: true
 
