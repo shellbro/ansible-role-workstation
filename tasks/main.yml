@@ -70,7 +70,6 @@
       - docker
       - molecule
       - python-vagrant
-      - s-tui
   become: true
 
 - name: install software from npm
