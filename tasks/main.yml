@@ -79,7 +79,7 @@
     global: true
   become: true
 
-- name: install Google Chrome and it\'s repository
+- name: "install Google Chrome and it's repository"
   yum:
     name: '{{ rpm_url_chrome }}'
   become: true
