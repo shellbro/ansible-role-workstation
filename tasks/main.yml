@@ -9,7 +9,7 @@
       - exiv2
       - gimp
       - git
-      - glibc-common # iconv
+      - glibc-common  # iconv
       - gnome-tweak-tool
       - ImageMagick
       - inkscape
