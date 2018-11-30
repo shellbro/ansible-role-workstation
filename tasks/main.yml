@@ -105,6 +105,7 @@
 # downloaded RPMs (/opt)
 # - TeamViewer
 # - vagrant
+# - packer
 # downloaded standalones (~/bin)
 # - burp
 # - calibre
