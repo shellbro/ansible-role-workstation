@@ -13,6 +13,7 @@ None
 Role Variables
 --------------
 
+* rpm_url_chrome - URL to Google Chrome RPM
 * autostart_apps - configure autostart (by default true)
 * autostart_user - configure autostart for this user (required when
 autostart_apps is true)
@@ -40,6 +41,7 @@ Example Playbook
     - hosts: servers
       roles:
         - role: shellbro.workstation
+          rpm_url_chrome: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
           autostart_apps: true
           autostart_user: shellbro
 

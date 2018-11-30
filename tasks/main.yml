@@ -79,6 +79,11 @@
     global: true
   become: true
 
+- name: install Google Chrome and it\'s repository
+  yum:
+    name: '{{ rpm_url_chrome }}'
+  become: true
+
 - name: autostart GUI apps on login
   copy:
     dest: /home/{{ autostart_user }}/.config/autostart
