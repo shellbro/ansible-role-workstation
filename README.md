@@ -16,6 +16,8 @@ Role Variables
 * rpm_url_chrome - URL to Google Chrome RPM (required)
 * rpm_url_slack - URL to Slack RPM (required)
 * rpm_url_skype - URL to Skype RPM (required)
+* custom_rpms - list of URLs to custom RPMs that will be installed (by default
+empty list)
 
 Dependencies' vars:
 
@@ -47,6 +49,9 @@ Example Playbook
           rpm_url_chrome: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
           rpm_url_slack: https://downloads.slack-edge.com/linux_releases/slack-3.3.3-0.1.fc21.x86_64.rpm
           rpm_url_skype: https://repo.skype.com/latest/skypeforlinux-64.rpm
+          custom_rpms:
+            - https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+            - https://releases.hashicorp.com/vagrant/2.2.2/vagrant_2.2.2_x86_64.rpm
 
           nux_dextop_rpm_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 

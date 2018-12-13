@@ -93,16 +93,16 @@
     name: '{{ rpm_url_skype }}'
   become: true
 
-# TODO:
-# downloaded RPMs (/opt)
-# - TeamViewer
-# - vagrant
-# - packer
+- name: install custom RPMs
+  yum:
+    name: '{{ custom_rpms }}'
+  become: true
+
 # downloaded standalones (~/bin)
 # - burp
 # - calibre
 # - leiningen
+# - packer
 # - sp-sc-auth (SopCast client)
 # - tor-browser
-# downloaded from Dropbox
 # - truecrypt
