@@ -15,9 +15,6 @@ Role Variables
 
 * rpm_url_chrome - URL to Google Chrome RPM (required)
 * rpm_url_slack - URL to Slack RPM (required)
-* autostart_apps - configure autostart (by default true)
-* autostart_user - configure autostart for this user (required when
-autostart_apps is true)
 
 Dependencies' vars:
 

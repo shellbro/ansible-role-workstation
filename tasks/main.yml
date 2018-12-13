@@ -88,18 +88,6 @@
     name: '{{ rpm_url_slack }}'
   become: true
 
-- name: autostart GUI apps on login
-  copy:
-    dest: /home/{{ autostart_user }}/.config/autostart
-    group: '{{ autostart_user }}'
-    mode: 0664
-    owner: '{{ autostart_user }}'
-    src: '{{ item }}'
-  with_fileglob:
-    - autostart/*
-  become: true
-  when: autostart_apps
-
 # TODO:
 # downloaded RPMs (/opt)
 # - TeamViewer
