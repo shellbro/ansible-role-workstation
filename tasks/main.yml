@@ -88,6 +88,11 @@
     name: '{{ rpm_url_slack }}'
   become: true
 
+- name: "install Skype and it's repository"
+  yum:
+    name: '{{ rpm_url_skype }}'
+  become: true
+
 # TODO:
 # downloaded RPMs (/opt)
 # - TeamViewer
@@ -101,6 +106,3 @@
 # - tor-browser
 # downloaded from Dropbox
 # - truecrypt
-# custom repositories
-# - skype
-# - VirtualBox-5.1 @virtualbox
