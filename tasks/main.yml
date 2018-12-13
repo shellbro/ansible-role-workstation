@@ -64,20 +64,6 @@
       - xchm
   become: true
 
-- name: install software from pip
-  pip:
-    name:
-      - docker
-      - molecule
-      - python-vagrant
-  become: true
-
-- name: install software from npm
-  npm:
-    name: castnow
-    global: true
-  become: true
-
 - name: "install Google Chrome and it's repository"
   yum:
     name: '{{ rpm_url_chrome }}'
@@ -96,6 +82,20 @@
 - name: install custom RPMs
   yum:
     name: '{{ custom_rpms }}'
+  become: true
+
+- name: install software from pip
+  pip:
+    name:
+      - docker
+      - molecule
+      - python-vagrant
+  become: true
+
+- name: install software from npm
+  npm:
+    name: castnow
+    global: true
   become: true
 
 # downloaded standalones (~/bin)
