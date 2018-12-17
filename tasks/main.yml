@@ -22,6 +22,7 @@
 - name: install software from EPEL repository
   yum:
     name:
+      - aalib
       - adobe-source-code-pro-fonts
       - ansible
       - ansible-lint
@@ -30,8 +31,10 @@
       - chromium
       - chromedriver
       - cloc
+      - cowsay
       - csv
       - csvcat
+      - fortune-mod
       - hexchat
       - imapsync
       - jq
