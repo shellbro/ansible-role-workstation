@@ -120,9 +120,8 @@
 
 - name: fetch .bashrc
   get_url:
-    dest: /home/{{ username }}/.bashrc
+    dest: /home/{{ username }}
     group: '{{ username }}'
-    force: true
     mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_bashrc }}'
@@ -130,9 +129,8 @@
 
 - name: fetch .gitconfig
   get_url:
-    dest: /home/{{ username }}/.gitconfig
+    dest: /home/{{ username }}
     group: '{{ username }}'
-    force: true
     mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_gitconfig }}'
@@ -140,9 +138,8 @@
 
 - name: fetch .toprc
   get_url:
-    dest: /home/{{ username }}/.toprc
+    dest: /home/{{ username }}
     group: '{{ username }}'
-    force: true
     mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_toprc }}'
@@ -159,9 +156,8 @@
 
 - name: fetch Terminator config
   get_url:
-    dest: /home/{{ username }}/.config/terminator/config
+    dest: /home/{{ username }}/.config/terminator
     group: '{{ username }}'
-    force: true
     mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_terminator }}'
