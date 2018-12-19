@@ -58,10 +58,10 @@ Example Playbook
           custom_rpms:
             - https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
             - https://releases.hashicorp.com/vagrant/2.2.2/vagrant_2.2.2_x86_64.rpm
-          config_url_bashrc: https://github.com/shellbro/dotfiles/blob/master/.bashrc
-          config_url_gitconfig: https://github.com/shellbro/dotfiles/blob/master/.gitconfig
-          config_url_toprc: https://github.com/shellbro/dotfiles/blob/master/.toprc
-          config_url_terminator: https://github.com/shellbro/dotfiles/blob/master/.config/terminator/config
+          config_url_bashrc: https://raw.githubusercontent.com/shellbro/dotfiles/master/.bashrc
+          config_url_gitconfig: https://raw.githubusercontent.com/shellbro/dotfiles/master/.gitconfig
+          config_url_toprc: https://raw.githubusercontent.com/shellbro/dotfiles/master/.toprc
+          config_url_terminator: https://raw.githubusercontent.com/shellbro/dotfiles/master/.config/terminator/config
 
           nux_dextop_rpm_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
