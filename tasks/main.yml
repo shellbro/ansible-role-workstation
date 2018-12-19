@@ -1,5 +1,22 @@
 ---
 
+- name: create user account
+  user:
+    name: '{{ username }}'
+  become: true
+
+- name: create common directories
+  file:
+    group: '{{ username }}'
+    owner: '{{ username }}'
+    mode: 0775
+    path: /home/{{ username }}/{{ item }}
+    state: directory
+  with_items:
+    - bin
+    - Dropbox
+  become: true
+
 - name: install software from CentOS repositories
   yum:
     name:
@@ -99,6 +116,46 @@
   npm:
     name: castnow
     global: true
+  become: true
+
+- name: fetch .bashrc
+  get_url:
+    dest: /home/{{ username }}/.bashrc
+    group: '{{ username }}'
+    force: true
+    mode: 0644
+    owner: '{{ username }}'
+    url: '{{ config_url_bashrc }}'
+  become: true
+
+- name: fetch .gitconfig
+  get_url:
+    dest: /home/{{ username }}/.gitconfig
+    group: '{{ username }}'
+    force: true
+    mode: 0644
+    owner: '{{ username }}'
+    url: '{{ config_url_gitconfig }}'
+  become: true
+
+- name: fetch .toprc
+  get_url:
+    dest: /home/{{ username }}/.toprc
+    group: '{{ username }}'
+    force: true
+    mode: 0644
+    owner: '{{ username }}'
+    url: '{{ config_url_toprc }}'
+  become: true
+
+- name: fetch Terminator config
+  get_url:
+    dest: /home/{{ username }}/.config/terminator/config
+    group: '{{ username }}'
+    force: true
+    mode: 0644
+    owner: '{{ username }}'
+    url: '{{ config_url_terminator }}'
   become: true
 
 # downloaded standalones (~/bin)
