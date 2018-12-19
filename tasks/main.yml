@@ -123,7 +123,7 @@
     dest: /home/{{ username }}/.bashrc
     group: '{{ username }}'
     force: true
-    mode: 0644
+    mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_bashrc }}'
   become: true
@@ -133,7 +133,7 @@
     dest: /home/{{ username }}/.gitconfig
     group: '{{ username }}'
     force: true
-    mode: 0644
+    mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_gitconfig }}'
   become: true
@@ -143,9 +143,18 @@
     dest: /home/{{ username }}/.toprc
     group: '{{ username }}'
     force: true
-    mode: 0644
+    mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_toprc }}'
+  become: true
+
+- name: create directories for Terminator config
+  file:
+    group: '{{ username }}'
+    mode: 0775
+    owner: '{{ username }}'
+    path: /home/.config/terminator
+    state: directory
   become: true
 
 - name: fetch Terminator config
@@ -153,7 +162,7 @@
     dest: /home/{{ username }}/.config/terminator/config
     group: '{{ username }}'
     force: true
-    mode: 0644
+    mode: 0664
     owner: '{{ username }}'
     url: '{{ config_url_terminator }}'
   become: true
