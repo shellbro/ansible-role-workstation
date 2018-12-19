@@ -19,10 +19,10 @@ Role Variables
 * rpm_url_skype - URL to Skype RPM (required)
 * custom_rpms - list of URLs to custom RPMs that will be installed (by default
 empty list)
-* config_url_bashrc - URL to .bashrc file
-* config_url_gitconfig - URL to .gitconfig file
-* config_url_toprc - URL to .toprc file
-* config_url_terminator - URL to Terminator config
+* config_url_bashrc - URL to .bashrc file (required)
+* config_url_gitconfig - URL to .gitconfig file (required)
+* config_url_toprc - URL to .toprc file (required)
+* config_url_terminator - URL to Terminator config (required)
 
 Dependencies' vars:
 
