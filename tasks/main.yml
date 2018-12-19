@@ -153,7 +153,7 @@
     group: '{{ username }}'
     mode: 0775
     owner: '{{ username }}'
-    path: /home/.config/terminator
+    path: /home/{{ username }}/.config/terminator
     state: directory
   become: true
 
