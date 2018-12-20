@@ -15,6 +15,8 @@
   with_items:
     - bin
     - Dropbox
+    - Git/bitbucket.org
+    - Git/github.com
   become: true
 
 - name: install software from CentOS repositories
