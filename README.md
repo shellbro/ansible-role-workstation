@@ -1,5 +1,5 @@
 shellbro.workstation
-===========
+====================
 
 [![Build Status](https://travis-ci.org/shellbro/ansible-role-workstation.svg?branch=master)](https://travis-ci.org/shellbro/ansible-role-workstation)
 
