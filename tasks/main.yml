@@ -171,9 +171,13 @@
     url: '{{ config_url_terminator }}'
   become: true
 
-# downloaded standalones (~/bin)
+# standalone binary (~/bin)
 # - burp
 # - leiningen
 # - packer
 # - tor-browser
+
+# install script
 # - truecrypt
+
+# VPN
