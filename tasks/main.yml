@@ -171,6 +171,7 @@
   become: true
 
 - name: disable ipmievd
+  tags: notest
   service:
     enabled: false
     name: ipmievd
