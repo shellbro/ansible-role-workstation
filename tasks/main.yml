@@ -14,7 +14,6 @@
     state: directory
   with_items:
     - bin
-    - Dropbox
     - Git/bitbucket.org
     - Git/github.com
     - rdesktop
