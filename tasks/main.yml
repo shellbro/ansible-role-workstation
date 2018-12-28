@@ -17,6 +17,7 @@
     - Dropbox
     - Git/bitbucket.org
     - Git/github.com
+    - rdesktop
   become: true
 
 - name: install software from CentOS repositories
