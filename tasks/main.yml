@@ -170,6 +170,13 @@
     url: '{{ config_url_terminator }}'
   become: true
 
+- name: disable ipmievd
+  service:
+    enabled: false
+    name: ipmievd
+    state: stopped
+  become: yes
+
 # standalone binary (~/bin)
 # - burp
 # - leiningen
