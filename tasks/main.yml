@@ -175,7 +175,7 @@
     enabled: false
     name: ipmievd
     state: stopped
-  become: yes
+  become: true
 
 # standalone binary (~/bin)
 # - burp
