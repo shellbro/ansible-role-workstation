@@ -102,9 +102,14 @@
     name: '{{ rpm_url_skype }}'
   become: true
 
+- name: "install TeamViewer and it's repository"
+  yum:
+    name: '{{ rpm_url_teamviewer }}'
+  become: true
+
 - name: install custom RPMs
   yum:
-    name: '{{ custom_rpms }}'
+    name: '{{ rpm_url_custom }}'
   become: true
 
 - name: install software from pip

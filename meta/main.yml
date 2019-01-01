@@ -19,7 +19,9 @@ galaxy_info:
 
 dependencies:
   - shellbro.docker-engine-ce
-  - shellbro.emacs
+  - role: shellbro.emacs
+    src_url: '{{ emacs_src_url }}'
+    src_dir: '{{ emacs_src_dir }}'
   - shellbro.epel
   - shellbro.hardware-tools
   - shellbro.npm
