@@ -27,8 +27,6 @@ default empty list)
 
 Dependencies' vars:
 
-* emacs_src_url - src_url var from shellbro.emacs role
-* emacs_src_dir - src_dir var from shellbro.emacs role (by default `/root/src`)
 * nux_dextop_rpm_url - rpm_url var from shellbro.nux-dextop role
 
 Dependencies
@@ -41,12 +39,6 @@ Dependencies that are required for this role to work:
 * shellbro.nux-dextop
 * shellbro.pip
 * shellbro.scl
-
-Roles that are pulled for user convenience:
-
-* shellbro.docker-engine-ce
-* shellbro.emacs
-* shellbro.hardware-tools
 
 Example Playbook
 ----------------
@@ -66,7 +58,6 @@ Example Playbook
           config_url_toprc: https://raw.githubusercontent.com/shellbro/dotfiles/master/.toprc
           config_url_terminator: https://raw.githubusercontent.com/shellbro/dotfiles/master/.config/terminator/config
 
-          emacs_src_url: http://ftp.task.gda.pl/pub/gnu/emacs/emacs-26.1.tar.xz
           nux_dextop_rpm_url: http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
 License

@@ -1,13 +1,7 @@
 ---
 
-- src: https://github.com/shellbro/ansible-role-docker-engine-ce.git
-  name: shellbro.docker-engine-ce
-- src: https://github.com/shellbro/ansible-role-emacs.git
-  name: shellbro.emacs
 - src: https://github.com/shellbro/ansible-role-epel.git
   name: shellbro.epel
-- src: https://github.com/shellbro/ansible-role-hardware-tools.git
-  name: shellbro.hardware-tools
 - src: https://github.com/shellbro/ansible-role-npm.git
   name: shellbro.npm
 - src: https://github.com/shellbro/ansible-role-nux-dextop.git

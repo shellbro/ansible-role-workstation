@@ -18,12 +18,7 @@ galaxy_info:
   galaxy_tags: []
 
 dependencies:
-  - shellbro.docker-engine-ce
-  - role: shellbro.emacs
-    src_url: '{{ emacs_src_url }}'
-    src_dir: '{{ emacs_src_dir }}'
   - shellbro.epel
-  - shellbro.hardware-tools
   - shellbro.npm
   - role: shellbro.nux-dextop
     rpm_url: '{{ nux_dextop_rpm_url }}'
