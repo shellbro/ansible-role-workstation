@@ -24,6 +24,7 @@
     name:
       - dos2unix
       - elinks
+      - espeak
       - exiv2
       - gimp
       - git
