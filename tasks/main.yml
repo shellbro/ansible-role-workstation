@@ -176,6 +176,14 @@
     url: '{{ config_url_terminator }}'
   become: true
 
+- name: disable teamviewerd
+  tags: notest
+  service:
+    enabled: false
+    name: teamviewerd
+    state: stopped
+  become: true
+
 # standalone binary (~/bin)
 # - burp
 # - leiningen
