@@ -6,8 +6,9 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
-    image: centos:7
+  - name: ansible-role-workstation
+    image: shellbro/centos-molecule
+    pre_build_image: true
 provisioner:
   name: ansible
   lint:
