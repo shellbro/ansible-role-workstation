@@ -48,6 +48,7 @@
       - ansible-lint
       - argbash
       - autossh
+      - certbot
       - chromium
       - chromedriver
       - cloc
@@ -63,6 +64,7 @@
       - NetworkManager-l2tp-gnome
       - NetworkManager-openvpn-gnome
       - ntfsprogs
+      - python2-certbot-dns-ovh
       - python34
       - recordmydesktop
       - rlwrap
