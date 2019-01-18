@@ -115,18 +115,38 @@
     name: '{{ rpm_url_custom }}'
   become: true
 
+- name: install setuptools from pip
+  pip:
+    extra_args: --user
+    name: setuptools  # molecule installation
+    state: latest
+  with_items:
+    - '{{ username }}'
+    - root
+  become_user: '{{ item }}'
+  become: true
+
 - name: install software from pip
   pip:
+    extra_args: --user
     name:
       - docker-py
       - molecule
+      - pyOpenSSL  # certbot fix
       - python-vagrant
+    state: latest
+  with_items:
+    - '{{ username }}'
+    - root
+  become_user: '{{ item }}'
   become: true
 
 - name: install software from npm
   npm:
     name: castnow
     global: true
+    production: true
+    state: latest
   become: true
 
 - name: fetch .bashrc
