@@ -119,7 +119,6 @@
   pip:
     extra_args: --user
     name: setuptools  # molecule installation
-    state: latest
   with_items:
     - '{{ username }}'
     - root
@@ -134,7 +133,6 @@
       - molecule
       - pyOpenSSL  # certbot fix
       - python-vagrant
-    state: latest
   with_items:
     - '{{ username }}'
     - root
@@ -146,7 +144,6 @@
     name: castnow
     global: true
     production: true
-    state: latest
   become: true
 
 - name: fetch .bashrc
