@@ -58,6 +58,7 @@
       - fortune-mod
       - hexchat
       - imapsync
+      - inotify-tools
       - jq
       - keepassx
       - mediainfo
