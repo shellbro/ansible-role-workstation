@@ -68,6 +68,7 @@
       - NetworkManager-l2tp-gnome
       - NetworkManager-openvpn-gnome
       - ntfsprogs
+      - odt2txt
       - p7zip
       - python2-certbot-dns-ovh
       - python34
