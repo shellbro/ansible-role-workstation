@@ -37,6 +37,7 @@
       - poppler-utils
       - python
       - tigervnc
+      - tree
       - whois
   become: true
 
