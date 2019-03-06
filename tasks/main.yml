@@ -67,6 +67,7 @@
       - mediainfo
       - NetworkManager-l2tp-gnome
       - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
       - ntfsprogs
       - odt2txt
       - p7zip
