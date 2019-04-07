@@ -34,7 +34,7 @@
       - inkscape
       - java-1.8.0-openjdk
       - libvirt
-      - libvirt-devel # vagrant-libvirt
+      - libvirt-devel  # vagrant-libvirt
       - poppler-utils
       - python
       - tigervnc
