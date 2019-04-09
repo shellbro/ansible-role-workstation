@@ -33,12 +33,12 @@
       - ImageMagick
       - inkscape
       - java-1.8.0-openjdk
-      - '@^virtualization-host-environment'
       - libvirt-devel  # vagrant-libvirt
       - poppler-utils
       - python
       - tigervnc
       - tree
+      - '@^Virtualization Host'
       - whois
   become: true
 
