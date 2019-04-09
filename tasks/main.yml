@@ -33,7 +33,7 @@
       - ImageMagick
       - inkscape
       - java-1.8.0-openjdk
-      - libvirt
+      - '@^virtualization-host-environment'
       - libvirt-devel  # vagrant-libvirt
       - poppler-utils
       - python
