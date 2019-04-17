@@ -39,6 +39,7 @@
       - python
       - tigervnc
       - tree
+      - virt-manager
       - '@^Virtualization Host'
       - whois
   become: true
