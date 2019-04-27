@@ -29,13 +29,13 @@
       - exiv2
       - gimp
       - git
-      - glibc-common  # iconv
+      - glibc-common  # provides /usr/bin/iconv
       - gnome-tweak-tool
-      - gnutls-utils  # certtool
+      - gnutls-utils  # provides /usr/bin/certtool
       - ImageMagick
       - inkscape
       - java-1.8.0-openjdk
-      - libvirt-devel  # vagrant-libvirt
+      - libvirt-devel  # required by vagrant-libvirt
       - poppler-utils
       - python
       - tigervnc
@@ -129,7 +129,7 @@
 - name: install setuptools from pip
   pip:
     extra_args: --user
-    name: setuptools  # molecule installation
+    name: setuptools  # requirement for molecule installation
   with_items:
     - '{{ username }}'
     - root
@@ -142,7 +142,7 @@
     name:
       - docker-py
       - molecule
-      - pyOpenSSL  # certbot fix
+      - pyOpenSSL  # /usr/bin/certbot fix
       - python-vagrant
   with_items:
     - '{{ username }}'
