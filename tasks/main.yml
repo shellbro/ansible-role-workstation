@@ -31,6 +31,7 @@
       - git
       - glibc-common  # iconv
       - gnome-tweak-tool
+      - gnutls-utils  # certtool
       - ImageMagick
       - inkscape
       - java-1.8.0-openjdk
