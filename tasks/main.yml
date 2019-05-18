@@ -54,6 +54,7 @@
       - ansible
       - ansible-lint
       - argbash
+      - ascii
       - autossh
       - certbot
       - chromium
