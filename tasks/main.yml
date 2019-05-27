@@ -44,6 +44,7 @@
       - virt-manager
       - '@^Virtualization Host'
       - whois
+      - yum-plugin-versionlock
   become: true
 
 - name: install software from EPEL repository
