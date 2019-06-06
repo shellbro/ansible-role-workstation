@@ -78,6 +78,7 @@
       - ntfsprogs
       - odt2txt
       - p7zip
+      - perl-Image-ExifTool
       - pwgen
       - python2-certbot-dns-ovh
       - python34
