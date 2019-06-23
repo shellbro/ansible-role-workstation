@@ -1,12 +1,17 @@
 ---
 
 - src: https://github.com/shellbro/ansible-role-epel.git
+  version: master
   name: shellbro.epel
 - src: https://github.com/shellbro/ansible-role-npm.git
+  version: master
   name: shellbro.npm
 - src: https://github.com/shellbro/ansible-role-nux-dextop.git
+  version: master
   name: shellbro.nux-dextop
 - src: https://github.com/shellbro/ansible-role-pip.git
+  version: master
   name: shellbro.pip
 - src: https://github.com/shellbro/ansible-role-scl.git
+  version: master
   name: shellbro.scl
