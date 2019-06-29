@@ -142,9 +142,8 @@
   pip:
     extra_args: --user
     name:
+      - docker-py
       - molecule
-      - docker
-      - pyOpenSSL  # /usr/bin/certbot fix
       - python-vagrant
   become_user: '{{ username }}'
   become: true
