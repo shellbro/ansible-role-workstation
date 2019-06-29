@@ -52,6 +52,8 @@
     name:
       - aalib
       - adobe-source-code-pro-fonts
+      - ansible
+      - ansible-lint
       - argbash
       - ascii
       - autossh
@@ -133,24 +135,18 @@
   pip:
     extra_args: --user
     name: setuptools  # requirement for molecule installation
-  with_items:
-    - '{{ username }}'
-    - root
-  become_user: '{{ item }}'
+  become_user: '{{ username }}'
   become: true
 
 - name: install software from pip
   pip:
     extra_args: --user
     name:
-      - docker-py
       - molecule
+      - docker
       - pyOpenSSL  # /usr/bin/certbot fix
       - python-vagrant
-  with_items:
-    - '{{ username }}'
-    - root
-  become_user: '{{ item }}'
+  become_user: '{{ username }}'
   become: true
 
 - name: install software from npm
