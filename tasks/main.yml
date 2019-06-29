@@ -133,9 +133,8 @@
 
 - name: update setuptools from CentOS repository for molecule
   pip:
-    extra_args: --user
+    extra_args: --upgrade --user
     name: setuptools
-    state: latest
   become_user: '{{ username }}'
   become: true
 
