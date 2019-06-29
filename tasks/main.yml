@@ -131,10 +131,11 @@
     name: '{{ rpm_url_custom }}'
   become: true
 
-- name: install setuptools from pip
+- name: update setuptools from CentOS repository for molecule
   pip:
     extra_args: --user
-    name: setuptools  # requirement for molecule installation
+    name: setuptools
+    state: latest
   become_user: '{{ username }}'
   become: true
 
