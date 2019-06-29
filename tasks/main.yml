@@ -52,8 +52,6 @@
     name:
       - aalib
       - adobe-source-code-pro-fonts
-      - ansible
-      - ansible-lint
       - argbash
       - ascii
       - autossh
