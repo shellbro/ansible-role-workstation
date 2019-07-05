@@ -16,6 +16,7 @@
     - bin
     - Git/bitbucket.org
     - Git/github.com
+    - Git/gitlab.com
     - Playground
     - rdesktop
   become: true
