@@ -109,10 +109,10 @@
 - name: Install RPMs and bundled repositories
   yum:
     name:
-      - {{ rpm_url_chrome }}
-      - {{ rpm_url_skype }}
-      - {{ rpm_url_slack }}
-      - {{ rpm_url_teamviewer }}
+      - "{{ rpm_url_chrome }}"
+      - "{{ rpm_url_skype }}"
+      - "{{ rpm_url_slack }}"
+      - "{{ rpm_url_teamviewer }}"
   become: true
 
 - name: Install custom RPMs
