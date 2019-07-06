@@ -131,10 +131,9 @@
   pip:
     extra_args: --user
     name:
-      - ansible==2.4.6
       - awscli
       - docker-py
-      - molecule==2.19
+      - molecule
       - python-vagrant
   become: true
   become_user: "{{ username }}"
