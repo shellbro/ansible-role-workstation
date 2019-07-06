@@ -1,15 +1,14 @@
 ---
-
-- name: create user account
+- name: Make sure user account exists
   user:
-    name: '{{ username }}'
+    name: "{{ username }}"
   become: true
 
-- name: create common directories
+- name: Create default directories
   file:
-    group: '{{ username }}'
-    owner: '{{ username }}'
+    group: "{{ username }}"
     mode: 0775
+    owner: "{{ username }}"
     path: /home/{{ username }}/{{ item }}
     state: directory
   with_items:
@@ -21,7 +20,7 @@
     - rdesktop
   become: true
 
-- name: install software from CentOS repositories
+- name: Install software from CentOS repositories
   yum:
     name:
       - crypto-utils  # provides /usr/bin/certwatch
@@ -43,12 +42,12 @@
       - tigervnc
       - tree
       - virt-manager
-      - '@^Virtualization Host'
+      - "@^Virtualization Host"
       - whois
       - yum-plugin-versionlock
   become: true
 
-- name: install software from EPEL repository
+- name: Install software from EPEL repository
   yum:
     name:
       - aalib
@@ -93,12 +92,12 @@
       - youtube-dl
   become: true
 
-- name: install software from SCL
+- name: Install software from SCL
   yum:
     name: rh-git29
   become: true
 
-- name: install software from nux-dextop repository
+- name: Install software from nux-dextop repository
   yum:
     name:
       - rdesktop
@@ -107,39 +106,28 @@
       - xchm
   become: true
 
-- name: "install Google Chrome and it's repository"
+- name: Install RPMs and bundled repositories
   yum:
-    name: '{{ rpm_url_chrome }}'
+    name:
+      - {{ rpm_url_chrome }}
+      - {{ rpm_url_skype }}
+      - {{ rpm_url_slack }}
+      - {{ rpm_url_teamviewer }}
   become: true
 
-- name: "install Slack and it's repository"
+- name: Install custom RPMs
   yum:
-    name: '{{ rpm_url_slack }}'
+    name: "{{ rpm_url_custom }}"
   become: true
 
-- name: "install Skype and it's repository"
-  yum:
-    name: '{{ rpm_url_skype }}'
-  become: true
-
-- name: "install TeamViewer and it's repository"
-  yum:
-    name: '{{ rpm_url_teamviewer }}'
-  become: true
-
-- name: install custom RPMs
-  yum:
-    name: '{{ rpm_url_custom }}'
-  become: true
-
-- name: update setuptools from CentOS repository for molecule
+- name: Update setuptools from CentOS repository for molecule installation
   pip:
     extra_args: --upgrade --user
     name: setuptools
-  become_user: '{{ username }}'
   become: true
+  become_user: "{{ username }}"
 
-- name: install software from pip
+- name: Install software from pip
   pip:
     extra_args: --user
     name:
@@ -148,66 +136,45 @@
       - docker-py
       - molecule==2.19
       - python-vagrant
-  become_user: '{{ username }}'
   become: true
+  become_user: "{{ username }}"
 
-- name: install software from npm
+- name: Install software from npm
   npm:
-    name: castnow
     global: true
+    name: castnow
     production: true
   become: true
 
-- name: fetch .bashrc
-  get_url:
-    dest: /home/{{ username }}/.bashrc
-    force: true
-    group: '{{ username }}'
-    mode: 0664
-    owner: '{{ username }}'
-    url: '{{ config_url_bashrc }}'
-  become: true
-
-- name: fetch .gitconfig
-  get_url:
-    dest: /home/{{ username }}/.gitconfig
-    force: true
-    group: '{{ username }}'
-    mode: 0664
-    owner: '{{ username }}'
-    url: '{{ config_url_gitconfig }}'
-  become: true
-
-- name: fetch .toprc
-  get_url:
-    dest: /home/{{ username }}/.toprc
-    force: true
-    group: '{{ username }}'
-    mode: 0664
-    owner: '{{ username }}'
-    url: '{{ config_url_toprc }}'
-  become: true
-
-- name: create directories for Terminator config
+- name: Create directories for Terminator config
   file:
-    group: '{{ username }}'
+    group: "{{ username }}"
     mode: 0775
-    owner: '{{ username }}'
+    owner: "{{ username }}"
     path: /home/{{ username }}/.config/terminator
     state: directory
   become: true
 
-- name: fetch Terminator config
+- name: Download configuration files
   get_url:
-    dest: /home/{{ username }}/.config/terminator/config
+    dest: "{{ item.dest }}"
     force: true
-    group: '{{ username }}'
+    group: "{{ username }}"
     mode: 0664
-    owner: '{{ username }}'
-    url: '{{ config_url_terminator }}'
+    owner: "{{ username }}"
+    url: "{{ item.url }}"
+  with_items:
+    - dest: /home/{{ username }}/.bashrc
+      url: "{{ config_url_bashrc }}"
+    - dest: /home/{{ username }}/.gitconfig
+      url: "{{ config_url_gitconfig }}"
+    - dest: /home/{{ username }}/.toprc
+      url: "{{ config_url_toprc }}"
+    - dest: /home/{{ username }}/.config/terminator/config
+      url: "{{ config_url_terminator }}"
   become: true
 
-- name: disable teamviewerd
+- name: Disable teamviewerd
   tags: notest
   service:
     enabled: false

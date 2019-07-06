@@ -1,8 +1,7 @@
 ---
-
 galaxy_info:
   author: Jakub Gorczyca
-  description: Ansible role for configuring workstation (CentOS 7).
+  description: Ansible role for configuring workstation on CentOS 7
 
   issue_tracker_url: https://github.com/shellbro/ansible-role-workstation/issues
 
@@ -11,7 +10,7 @@ galaxy_info:
   min_ansible_version: 2.4
 
   platforms:
-    - name: CentOS
+    - name: EL
       versions:
         - 7
 
@@ -20,7 +19,7 @@ galaxy_info:
 dependencies:
   - shellbro.epel
   - shellbro.npm
-  - role: shellbro.nux-dextop
-    rpm_url: '{{ nux_dextop_rpm_url }}'
+  - role: shellbro.nux_dextop
+    rpm_url: "{{ nux_dextop_rpm_url }}"
   - shellbro.pip
   - shellbro.scl
