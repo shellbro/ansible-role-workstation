@@ -143,9 +143,10 @@
   pip:
     extra_args: --user
     name:
-      - docker-py
-      - molecule
+      - awscli
+      - docker-py==2.4.6
       - python-vagrant
+      - molecule==2.19
   become_user: '{{ username }}'
   become: true
 
