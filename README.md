@@ -27,7 +27,7 @@ default empty list)
 
 Dependencies' vars:
 
-* nux_dextop_rpm_url - rpm_url var from shellbro.nux_dextop role
+* nux_dextop_rpm_url - `rpm_url` var from `shellbro.nux_dextop` role
 
 Dependencies
 ------------
