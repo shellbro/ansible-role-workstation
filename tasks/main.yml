@@ -133,7 +133,7 @@
     name:
       - awscli
       - docker-py
-      - molecule==2.19
+      - molecule
       - python-vagrant
   become: true
   become_user: "{{ username }}"
