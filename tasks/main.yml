@@ -37,6 +37,7 @@
       - inkscape
       - java-1.8.0-openjdk
       - libvirt-devel  # required by vagrant-libvirt
+      - podman
       - poppler-utils
       - python
       - tigervnc
