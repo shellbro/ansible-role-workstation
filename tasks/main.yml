@@ -150,6 +150,7 @@
   gem:
     name: mustache
   become: true
+  become_user: "{{ username }}"
 
 - name: Create directories for Terminator config
   file:
