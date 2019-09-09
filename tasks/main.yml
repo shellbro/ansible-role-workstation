@@ -128,7 +128,7 @@
   become: true
   become_user: "{{ username }}"
 
-- name: Install software from pip
+- name: Install software with pip
   pip:
     extra_args: --user
     name:
@@ -139,11 +139,16 @@
   become: true
   become_user: "{{ username }}"
 
-- name: Install software from npm
+- name: Install software with npm
   npm:
     global: true
     name: castnow
     production: true
+  become: true
+
+- name: Install software with gem
+  gem:
+    name: mustache
   become: true
 
 - name: Create directories for Terminator config
