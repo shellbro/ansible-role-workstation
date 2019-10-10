@@ -133,6 +133,7 @@
     extra_args: --user
     name:
       - awscli
+      - cookiecutter
       - docker-py
       - molecule
       - python-vagrant
