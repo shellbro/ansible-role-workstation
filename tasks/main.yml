@@ -143,6 +143,7 @@
 
 - name: Install software with npm
   npm:
+    global: true
     name: castnow
     production: true
   become: true
