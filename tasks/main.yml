@@ -135,6 +135,7 @@
     name:
       - awscli
       - cookiecutter
+      - csvtotable
       - docker-py
       - molecule
       - python-vagrant
