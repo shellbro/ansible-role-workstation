@@ -16,4 +16,4 @@ install:
   - pip install molecule==2.19
 
 script:
-  - molecule test
+  - travis_wait molecule test
