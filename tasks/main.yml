@@ -195,11 +195,8 @@
 
 # standalone binary (~/bin)
 # - burp
-# - leiningen
 # - packer
 # - tor-browser
 
 # install script
-# - clojure
 # - truecrypt
-# - PIA OpenVPN setup
