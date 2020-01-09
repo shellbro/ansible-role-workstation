@@ -124,14 +124,16 @@
     name: "{{ rpm_url_custom }}"
   become: true
 
-- name: Update setuptools from CentOS repository for molecule installation
+- name: >-
+    Update setuptools from CentOS repository for molecule installation
+    (python2 pip)
   pip:
     extra_args: --upgrade --user
     name: setuptools
   become: true
   become_user: "{{ username }}"
 
-- name: Install software with pip
+- name: Install software with python2 pip
   pip:
     extra_args: --user
     name:
