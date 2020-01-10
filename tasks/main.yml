@@ -28,7 +28,7 @@
       - elinks
       - espeak
       - exiv2
-      - fwupdate
+      - fwupd
       - gimp
       - git
       - glibc-common  # provides /usr/bin/iconv
