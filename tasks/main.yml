@@ -83,6 +83,7 @@
       - odt2txt
       - p7zip
       - perl-Image-ExifTool
+      - pv
       - pwgen
       - python2-certbot-dns-ovh
       - python34
