@@ -46,7 +46,7 @@
       - virt-manager
       - "@^Virtualization Host"
       - whois
-      - wireshark
+      - wireshark-gnome
       - yum-plugin-changelog
       - yum-plugin-versionlock
   become: true
