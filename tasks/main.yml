@@ -39,7 +39,7 @@
       - libvirt-devel  # required by vagrant-libvirt
       - podman
       - poppler-utils
-      - python
+      - python2
       - rubygems
       - tigervnc
       - tree
@@ -88,6 +88,8 @@
       - pwgen
       - python2-certbot-dns-ovh
       - python34
+      - python36
+      - python36-chardet
       - recordmydesktop
       - rlwrap
       - terminator
@@ -126,16 +128,18 @@
     name: "{{ rpm_url_custom }}"
   become: true
 
-- name: Update pip and setuptools from CentOS repository (python2)
+- name: >-
+    Update pip and setuptools to newer versions than in CentOS repository
+    (python2)
   pip:
     extra_args: --user --upgrade
     name:
-      - pip  # run as python -m pip
+      - pip  # run as python2 -m pip
       - setuptools
   become: true
   become_user: "{{ username }}"
 
-- name: Install software with python2 pip
+- name: Install software with pip (python2)
   pip:
     extra_args: --user
     name:
@@ -145,6 +149,27 @@
       - docker-py
       - molecule
       - python-vagrant
+  become: true
+  become_user: "{{ username }}"
+
+- name: >-
+    Update pip and setuptools to newer versions than in CentOS repository
+    (python3)
+  pip:
+    executable: python3
+    extra_args: --user --upgrade
+    name:
+      - pip  # run as python3 -m pip
+      - setuptools
+  become: true
+  become_user: "{{ username }}"
+
+- name: Install software with pip (python3)
+  pip:
+    executable: python3
+    extra_args: --user
+    name:
+      - tensorflow
   become: true
   become_user: "{{ username }}"
 
