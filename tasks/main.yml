@@ -23,7 +23,6 @@
 - name: Install software from CentOS repositories
   yum:
     name:
-      - crypto-utils  # provides /usr/bin/certwatch
       - dos2unix
       - elinks
       - espeak
