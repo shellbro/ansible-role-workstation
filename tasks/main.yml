@@ -95,6 +95,7 @@
       - terminator
       - transmission
       - uget
+      - xclip
       - xls2csv
       - yamllint
       - youtube-dl
